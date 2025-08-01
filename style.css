@@ -31,12 +31,14 @@ p {
 }
 
 .banner h1 {
-    font-size: 60px;
+    font-size: clamp(2rem, 8vw, 60px);
+    white-space: nowrap;
     color: #ffffff;
     padding: 0;
 }
 
 .banner p {
+    font-size: clamp(1rem, 8vw, 20px);
     padding: 0;
     padding-top: 10px;
 }
