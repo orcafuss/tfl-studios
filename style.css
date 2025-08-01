@@ -39,6 +39,7 @@ p {
 
 .banner p {
     font-size: clamp(1rem, 8vw, 20px);
+    white-space: nowrap;
     padding: 0;
     padding-top: 10px;
 }
