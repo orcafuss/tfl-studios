@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');/* Reset & Grundstil */
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  border-bottom: 1px solid #ded7dc;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ded7dc;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.socials a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #f5f5f5;
+  padding: 0.8rem 0;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;}
+
+.nav-bar a:hover {
+  color: #BA6544;
+  transform: scale(1.1);
+}
+
+/* BANNER */
+.banner {
+  background: #913A52;
+  background: linear-gradient(90deg,rgba(145, 58, 82, 1) 0%, rgba(186, 101, 68, 1) 50%, rgba(209, 164, 75, 1) 100%);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* NEWS SECTION */
+.news {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.news h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #aaa;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.news article {
+  margin-bottom: 2rem;
+}
+
+.news h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #913A52;
+}
+
+.news p {
+  color: #444;
+}
+
+/* PROJECTS */
+.projects {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #666;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
