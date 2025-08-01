@@ -45,9 +45,11 @@ main {
     max-width: 800px;
     margin: 0rem 4rem 0rem 4rem;
 }
+main p {
+    margin: 0rem 2rem 0rem 2rem;
+}
 .project-container {
     display: flex;
-    gap: 2rem;
     align-items: flex-start;
     margin-bottom: 3rem;
     flex-wrap: wrap;
