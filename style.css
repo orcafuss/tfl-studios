@@ -19,13 +19,14 @@ h1 {
     font-family: "Unbounded", sans-serif;
     font-size: 30px;
     color: var(--text-muted);
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding: 0;
+    margin-bottom: 1rem;
 }
-p {
+p, a {
     font-size: 18px;
     color: var(--text-light);
-    line-height: 1.2;
+    line-height: 1.5;
+    text-decoration: none;
 }
 
 
@@ -35,14 +36,12 @@ p {
     text-align: center;
     padding: 3rem 2rem;
 }
-
 .banner h1 {
     font-size: clamp(2rem, 8vw, 60px);
     white-space: nowrap;
     color: var(--text-light);
     padding: 0;
 }
-
 .banner p {
     font-size: clamp(1rem, 8vw, 20px);
     white-space: nowrap;
@@ -50,13 +49,19 @@ p {
     padding-top: 10px;
 }
 
+
 main {
-    margin: 0rem 24rem 0rem 24rem;
+    margin: 0 20%;
 }
+section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
 .project-container {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 3rem;
     flex-wrap: wrap;
     gap: 2rem;
 }
@@ -67,16 +72,36 @@ main {
     flex-shrink: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.description {
+.project-description {
     flex: 1;
     min-width: 200px;
 }
+
 
 footer {
     text-align: center;
     padding: 2rem 0rem 2rem 0rem;
 }
-
-footer p {
+footer p, a {
     color: var(--text-muted);
+    font-size: 16px;
+}
+
+
+@media (max-width: 600px) {
+    main {
+        margin: 0 2vh;
+    }
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .poster {
+        width: 100%;
+        max-width: 300px;
+    }
+    .project-description {
+        text-align: left;
+    }
 }
