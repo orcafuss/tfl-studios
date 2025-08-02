@@ -5,21 +5,27 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    --bg-main: #171922;
+    --text-light: #ffffff;
+    --text-muted: #b0b0c0;
+}
 
 
 body {
-    background-color: #171922;
+    background-color: var(--bg-main);
 }
 h1 {
     font-family: "Unbounded", sans-serif;
     font-size: 30px;
-    color: #b0b0c0;
+    color: var(--text-muted);
     padding-top: 50px;
     padding-bottom: 20px;
 }
 p {
-    font-size: 20px;
-    color: #ffffff;
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.2;
 }
 
 
@@ -33,7 +39,7 @@ p {
 .banner h1 {
     font-size: clamp(2rem, 8vw, 60px);
     white-space: nowrap;
-    color: #ffffff;
+    color: var(--text-light);
     padding: 0;
 }
 
@@ -45,23 +51,19 @@ p {
 }
 
 main {
-    max-width: 800px;
-    margin: 0rem 4rem 0rem 4rem;
-}
-main p {
-    margin: 0rem 2rem 0rem 2rem;
+    margin: 0rem 24rem 0rem 24rem;
 }
 .project-container {
     display: flex;
     align-items: flex-start;
     margin-bottom: 3rem;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 .poster {
     width: 180px;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;
     flex-shrink: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -72,4 +74,9 @@ main p {
 
 footer {
     text-align: center;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+footer p {
+    color: var(--text-muted);
 }
