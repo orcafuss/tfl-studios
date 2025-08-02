@@ -66,7 +66,7 @@ section {
     gap: 2rem;
 }
 .poster {
-    width: 180px;
+    width: 160px;
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
