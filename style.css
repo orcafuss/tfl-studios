@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap');
-
 * {
     font-family: "Inter", sans-serif;
     margin: 0;
@@ -10,11 +9,24 @@
     --text-light: #ffffff;
     --text-muted: #b0b0c0;
 }
+::selection{
+
+   background-color: #b0b0c0;
+   color: #171922;
+}
+::-moz-selection{
+   background-color: #b0b0c0;
+   color: #171922;
+}
+
 
 
 body {
     background-color: var(--bg-main);
 }
+
+
+
 h1 {
     font-family: "Unbounded", sans-serif;
     font-size: 30px;
@@ -22,6 +34,7 @@ h1 {
     padding: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
 }
 p, a {
     font-size: 18px;
@@ -29,6 +42,7 @@ p, a {
     line-height: 1.5;
     text-decoration: none;
 }
+
 
 
 .banner {
@@ -51,11 +65,16 @@ p, a {
     padding: 0;
     padding-top: 10px;
 }
-.banner img {
-    margin-top: 20px;
+.banner svg {
     width:60px;
-    filter: invert;
+    display: block; /* entfernt den zusätzlichen Zeilenabstand */
+    margin: 20px auto 0 auto; /* optional: manuelles Margin setzen */
 }
+.banner .icon path {
+    fill: var(--text-light); /* oder einfach: fill: white; */
+}
+
+
 
 
 main {
@@ -66,10 +85,11 @@ section {
 }
 
 
+
 .video {
   position: relative;
   width: 100%;
-  padding-top: 56.25%;
+  padding-top: 53.4%;
   overflow: hidden;
 }
 .video iframe {
@@ -81,6 +101,7 @@ section {
   display: block;
   border-radius: 20px;
 }
+
 
 
 .project-container {
@@ -111,7 +132,19 @@ section {
 }
 
 
-.imprint p, a {
+
+footer {
+    text-align: center;
+    padding: 2rem 0rem 2rem 0rem;
+}
+footer p, footer a {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+
+
+.imprint p, .imprint a, .imprint ul {
     font-size: 18px;
     color: var(--text-light);
     line-height: 1.5;
@@ -120,16 +153,10 @@ section {
 .imprint a {
     color: var(--text-muted);
 }
-
-
-footer {
-    text-align: center;
-    padding: 2rem 0rem 2rem 0rem;
+.imprint p {
+    margin-top: 1.75em;
 }
-footer p, a {
-    color: var(--text-muted);
-    font-size: 16px;
-}
+
 
 
 @media (max-width: 600px) {
