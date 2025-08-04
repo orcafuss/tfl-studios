@@ -1,103 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap');
+
 * {
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
 }
+
 :root {
     --background: #1a1a1a;
+    --background-muted: #2a2a2a;
     --text-light: #eaeaea;
     --text-muted: #b1786d;
     --accent: #c95b4d;
     --accent-hover: #e17364;
 }
-::selection{
-   background-color: var(--text-muted);
-   color: var(--background);
+
+::selection {
+    background-color: var(--text-muted);
+    color: var(--background);
 }
-::-moz-selection{
+
+::-moz-selection {
    background-color: var(--text-muted);
    color: var(--background);
 }
 
+html {
+    position: relative;
+}
 
+html::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("assets/noise.png");
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+}
 
 body {
     background-color: var(--background);
 }
-html::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100%;
-  background-image: url("assets/noise.png");
-  opacity: 0.2;
-  pointer-events: none;
-  z-index: -1;
-  background-size: 300px 300px;
-  background-repeat: repeat;
-}
-html {
-  position: relative;
-}
-
-
 
 .banner {
-  position: relative;
-  overflow: hidden; /* wichtig für das Pseudoelement */
-  /* dein bestehendes Gradient etc. bleibt unangetastet */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #2a2a2a 0%, #d1d1d1 50%, #dba49c 100%);
+    text-align: center;
+    padding: 3rem 2rem;
+    user-select: none;
+    margin-bottom: 2rem;
 }
 
 .banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("assets/noise.png"); /* oder data-URI */
-  opacity: 0.2;
-  pointer-events: none;
-  z-index: 0;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/noise.png");
     background-size: 300px 300px;
-  background-repeat: repeat;
+    background-repeat: repeat;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
 }
 
+.banner h1 {
+    font-family: "Unbounded", sans-serif;
+    font-size: clamp(2rem, 8vw, 60px);
+    color: var(--text-light);
+    white-space: nowrap;
+}
 
-main p a {
+.banner p {
+    font-size: clamp(1rem, 8vw, 20px);
+    color: var(--text-light);
+    white-space: nowrap;
+    padding-top: 10px;
+}
+
+.banner svg.icon {
+    width: 60px;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.banner .icon path {
+    fill: var(--text-light);
+}
+
+.banner a {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    margin: 0 auto;
+}
+
+main p a,
+footer a {
     color: var(--accent);
-}
-main p a, footer a {
     transition: color 0.3s ease;
+    text-decoration: none;
 }
-main p a:hover, footer a:hover {
+
+main p a:hover,
+footer a:hover {
     color: var(--accent-hover);
     opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 h1 {
     font-family: "Unbounded", sans-serif;
     font-size: 30px;
     color: var(--text-muted);
     padding: 0;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
+    margin: 3rem 0 1rem 0;
 }
+
 p, a {
     font-size: 20px;
     color: var(--text-light);
@@ -105,108 +128,87 @@ p, a {
     text-decoration: none;
 }
 
-
-
-.banner {
-    background: #082567;
-    background: linear-gradient(90deg, #2a2a2a 0%, #d1d1d1 50%, #dba49c 100%);
-    text-align: center;
-    padding: 3rem 2rem;
-    user-select: none;
-    margin-bottom: 2rem;
-}
-.banner h1 {
-    font-size: clamp(2rem, 8vw, 60px);
-    white-space: nowrap;
-    color: var(--text-light);
-    padding: 0;
-}
-.banner p {
-    font-size: clamp(1rem, 8vw, 20px);
-    white-space: nowrap;
-    padding: 0;
-    padding-top: 10px;
-}
-.banner svg {
-    width:60px;
-    display: block; /* entfernt den zusätzlichen Zeilenabstand */
-    margin: 20px auto 0 auto; /* optional: manuelles Margin setzen */
-}
-.banner .icon path {
-    fill: var(--text-light); /* oder einfach: fill: white; */
-}
-
-
-
-
 main {
     margin: 0 20%;
 }
-section {
-    padding-bottom: 2rem;
+
+.button {
+    background-color: var(--text-muted);
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+    display: inline-block;
+
 }
 
-
+.button:hover {
+    transform: scale(1.08);
+}
 
 .video {
-  position: relative;
-  width: 100%;
-  padding-top: 53.4%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 53.4%;
+    overflow: hidden;
 }
+
 .video iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-  border-radius: 20px;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    border-radius: 20px;
 }
-
-
 
 .project-container {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 2rem;
 }
+
 .project-container a {
     line-height: 0;
 }
+
 .poster {
     width: 160px;
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
+
 .poster:hover {
     transform: scale(1.05);
 }
+
 .project-description {
+    flex: 1;
     min-width: 200px;
-    flex: 1;           /* Wichtig: Beschreibung füllt den restlichen Platz */
-    word-wrap: break-word; /* Optional, für lange Wörter */
+    word-wrap: break-word;
 }
-
-
 
 footer {
     text-align: center;
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 2rem 0;
+    margin-top: 2rem;
 }
-footer p, footer a {
+
+footer p,
+footer a {
     color: var(--text-muted);
     font-size: 18px;
 }
 
-
-
-.imprint p, .imprint a, .imprint ul {
+.imprint p,
+.imprint a,
+.imprint ul {
     font-size: 18px;
     color: var(--text-light);
     line-height: 1.5;
@@ -216,27 +218,28 @@ footer p, footer a {
 .imprint p {
     margin-top: 1.75em;
 }
+
 .imprint a {
     color: var(--text-muted);
 }
-
-
 
 @media (max-width: 600px) {
     main {
         margin: 0 2vh;
     }
+
     .project-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
     .poster {
         width: 100%;
         max-width: 300px;
     }
+
     .project-description {
         text-align: left;
     }
 }
-
