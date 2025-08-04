@@ -5,25 +5,87 @@
     padding: 0;
 }
 :root {
-    --bg-main: #171922;
-    --text-light: #ffffff;
-    --text-muted: #b0b0c0;
+    --background: #1a1a1a;
+    --text-light: #eaeaea;
+    --text-muted: #b1786d;
+    --accent: #c95b4d;
+    --accent-hover: #e17364;
 }
 ::selection{
-
-   background-color: #b0b0c0;
-   color: #171922;
+   background-color: var(--text-muted);
+   color: var(--background);
 }
 ::-moz-selection{
-   background-color: #b0b0c0;
-   color: #171922;
+   background-color: var(--text-muted);
+   color: var(--background);
 }
 
 
 
 body {
-    background-color: var(--bg-main);
+    background-color: var(--background);
 }
+html::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-image: url("assets/noise.png");
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+  background-size: 300px 300px;
+  background-repeat: repeat;
+}
+html {
+  position: relative;
+}
+
+
+
+.banner {
+  position: relative;
+  overflow: hidden; /* wichtig für das Pseudoelement */
+  /* dein bestehendes Gradient etc. bleibt unangetastet */
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/noise.png"); /* oder data-URI */
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+    background-size: 300px 300px;
+  background-repeat: repeat;
+}
+
+
+main p a {
+    color: var(--accent);
+}
+main p a, footer a {
+    transition: color 0.3s ease;
+}
+main p a:hover, footer a:hover {
+    color: var(--accent-hover);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,7 +99,7 @@ h1 {
 
 }
 p, a {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-light);
     line-height: 1.5;
     text-decoration: none;
@@ -47,7 +109,7 @@ p, a {
 
 .banner {
     background: #082567;
-    background: linear-gradient(90deg, rgba(8, 37, 103, 1) 0%, rgba(109, 80, 167, 1) 50%, rgba(133, 46, 69, 1) 100%);
+    background: linear-gradient(90deg, #2a2a2a 0%, #d1d1d1 50%, #dba49c 100%);
     text-align: center;
     padding: 3rem 2rem;
     user-select: none;
@@ -139,7 +201,7 @@ footer {
 }
 footer p, footer a {
     color: var(--text-muted);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 
@@ -150,11 +212,12 @@ footer p, footer a {
     line-height: 1.5;
     text-decoration: none;
 }
-.imprint a {
-    color: var(--text-muted);
-}
+
 .imprint p {
     margin-top: 1.75em;
+}
+.imprint a {
+    color: var(--text-muted);
 }
 
 
@@ -176,3 +239,4 @@ footer p, footer a {
         text-align: left;
     }
 }
+
