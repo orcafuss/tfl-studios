@@ -11,8 +11,7 @@
     --background-muted: #2a2a2a;
     --text-light: #eaeaea;
     --text-muted: #b1786d;
-    --accent: #c95b4d;
-    --accent-hover: #e17364;
+    --text-muted-hover: #c95b4d;
 }
 
 ::selection {
@@ -38,7 +37,7 @@ html::before {
     background-image: url("assets/noise.png");
     background-size: 300px 300px;
     background-repeat: repeat;
-    opacity: 0.2;
+    opacity: 0.25;
     pointer-events: none;
     z-index: -1;
 }
@@ -46,6 +45,120 @@ html::before {
 body {
     background-color: var(--background);
 }
+
+/* typography */
+
+h1 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 30px;
+    color: var(--text-muted);
+    padding: 0;
+    margin: 3.5rem 0 1rem 0;
+}
+
+h3 {
+    margin: 2em 0 1em 0;
+    font-weight: bold;
+}
+
+h3, p, ul, a {
+    font-size: 20px;
+    color: var(--text-light);
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+a {
+    color: var(--text-muted);
+}
+
+/* layout structure */
+
+main {
+    margin: 0 20%;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* interactive elements */
+
+footer p,
+footer a {
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+main p a,
+footer a {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+main p a:hover,
+footer a:hover {
+    color: var(--text-muted-hover);
+    opacity: 1;
+}
+
+.button {
+    background-color: var(--text-muted);
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+    display: inline-block;
+
+}
+
+.button:hover {
+    transform: scale(1.08);
+}
+
+/* responsive media queries */
+
+@media (max-width: 600px) {
+    main {
+        margin: 0 2vh;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+
+    .poster {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project-description {
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .banner {
     position: relative;
@@ -64,7 +177,7 @@ body {
     background-image: url("assets/noise.png");
     background-size: 300px 300px;
     background-repeat: repeat;
-    opacity: 0.2;
+    opacity: 0.25;
     pointer-events: none;
     z-index: 0;
 }
@@ -74,19 +187,19 @@ body {
     font-size: clamp(2rem, 8vw, 60px);
     color: var(--text-light);
     white-space: nowrap;
+    margin: 0 0 20px 0;
 }
 
 .banner p {
     font-size: clamp(1rem, 8vw, 20px);
     color: var(--text-light);
     white-space: nowrap;
-    padding-top: 10px;
 }
 
 .banner svg.icon {
     width: 60px;
     display: block;
-    margin: 20px auto 0;
+    margin: 30px auto 0;
 }
 
 .banner .icon path {
@@ -100,57 +213,10 @@ body {
     margin: 0 auto;
 }
 
-main p a,
-footer a {
-    color: var(--accent);
-    transition: color 0.3s ease;
-    text-decoration: none;
-}
-
-main p a:hover,
-footer a:hover {
-    color: var(--accent-hover);
-    opacity: 1;
-}
-
-h1 {
-    font-family: "Unbounded", sans-serif;
-    font-size: 30px;
-    color: var(--text-muted);
-    padding: 0;
-    margin: 3rem 0 1rem 0;
-}
-
-p, a {
-    font-size: 20px;
-    color: var(--text-light);
-    line-height: 1.5;
-    text-decoration: none;
-}
-
-main {
-    margin: 0 20%;
-}
-
-.button {
-    background-color: var(--text-muted);
-    padding: 15px;
-    border-radius: 30px;
-    font-weight: bold;
-    color: var(--text-light);
-    transition: transform 0.3s ease;
-    display: inline-block;
-
-}
-
-.button:hover {
-    transform: scale(1.08);
-}
-
 .video {
     position: relative;
     width: 100%;
-    padding-top: 53.4%;
+    padding-top: 56.25%;
     overflow: hidden;
 }
 
@@ -194,52 +260,6 @@ main {
     word-wrap: break-word;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-}
-
-footer p,
-footer a {
-    color: var(--text-muted);
-    font-size: 18px;
-}
-
-.imprint p,
-.imprint a,
-.imprint ul {
-    font-size: 18px;
-    color: var(--text-light);
-    line-height: 1.5;
-    text-decoration: none;
-}
-
-.imprint p {
-    margin-top: 1.75em;
-}
-
-.imprint a {
-    color: var(--text-muted);
-}
-
-@media (max-width: 600px) {
-    main {
-        margin: 0 2vh;
-    }
-
-    .project-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .poster {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .project-description {
-        text-align: left;
-    }
+.imprint p, .imprint ul {
+    margin-bottom: 1em;
 }
