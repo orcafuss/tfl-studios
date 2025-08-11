@@ -1,1 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap');
 
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background: #1a1a1a;
+    --background-muted: #2a2a2a;
+    --text-light: #eaeaea;
+    --text-muted: #b1786d;
+    --text-muted-hover: #c95b4d;
+}
+
+::selection {
+    background-color: var(--text-muted);
+    color: var(--background);
+}
+
+::-moz-selection {
+   background-color: var(--text-muted);
+   color: var(--background);
+}
+
+html {
+    position: relative;
+}
+
+html::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("assets/noise.png");
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body {
+    background-color: var(--background);
+}
+
+/* typography */
+
+h1 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 30px;
+    color: var(--text-muted);
+    padding: 0;
+    margin: 3.5rem 0 1rem 0;
+}
+
+h3 {
+    margin: 2em 0 1em 0;
+    font-weight: bold;
+}
+
+h3, p, ul, a {
+    font-size: 20px;
+    color: var(--text-light);
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+a {
+    color: var(--text-muted);
+}
+
+/* layout structure */
+
+main {
+    margin: 0 20%;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* interactive elements */
+
+footer p,
+footer a {
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+main p a,
+footer a {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+main p a:hover,
+footer a:hover {
+    color: var(--text-muted-hover);
+    opacity: 1;
+}
+
+.button {
+    background-color: var(--text-muted);
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+    display: inline-block;
+
+}
+
+.button:hover {
+    transform: scale(1.08);
+}
+
+/* responsive media queries */
+
+@media (max-width: 600px) {
+    main {
+        margin: 0 2vh;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+
+    .poster {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project-description {
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #2a2a2a 0%, #4b3d42 50%, #9d6b6b 100%);
+    text-align: center;
+    padding: 3rem 2rem;
+    user-select: none;
+    margin-bottom: 2rem;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/noise.png");
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.banner h1 {
+    font-family: "Unbounded", sans-serif;
+    font-size: clamp(2rem, 8vw, 60px);
+    color: var(--text-light);
+    white-space: nowrap;
+    margin: 0 0 20px 0;
+}
+
+.banner p {
+    font-size: clamp(1rem, 8vw, 20px);
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+.banner svg.icon {
+    width: 60px;
+    display: block;
+    margin: 30px auto 0;
+}
+
+.banner .icon path {
+    fill: var(--text-light);
+}
+
+.banner a {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    border-radius: 20px;
+}
+
+.project-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.project-container a {
+    line-height: 0;
+}
+
+.poster {
+    width: 160px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.poster:hover {
+    transform: scale(1.05);
+}
+
+.project-description {
+    flex: 1;
+    min-width: 200px;
+    word-wrap: break-word;
+}
+
+.imprint p, .imprint ul {
+    margin-bottom: 1em;
+}
