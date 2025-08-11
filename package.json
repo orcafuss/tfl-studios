@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build": "node build.js",
+    "dev:build": "nodemon --watch src --ext html,json --exec \"npm run build\"",
+    "dev:serve": "serve dist",
+    "dev": "concurrently \"npm run dev:build\" \"npm run dev:serve\""
+  },
+  "name": "tfl-studios-webserver-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "mustache": "^4.2.0"
+  }
+}
