@@ -2,8 +2,19 @@
   "lang": "de",
 
   "slogan": "Unabhängig. Kreativ. Bewegend.",
-
   "home": "Startseite",
   "legal_notice": "Impressum",
-  "privacy_policy": "Datenschutz"
+  "privacy_policy": "Datenschutz",
+
+  "introduction_heading": "Wer wir sind",
+  "introduction_content": "Wir sind <b>TFL Studios</b>, ein Newcomer in der Indie-Filmbranche. Wir haben es uns zum Ziel gemacht, [...]",
+
+  "projects_heading": "Bevorstehende Filmprojekte",
+  "project_1_description": "Unser Pilotprojekt <b>365 Days of Dead</b> spielt in einer alternativen Gegenwart, in der die USA nach dem Zweiten Weltkrieg eine „vereinte Nation“ gegründet haben. Doch eine Katastrophe verwandelt die Welt in eine postapokalyptische Landschaft voller Untoter. Die Überlebenden kämpfen nicht nur ums Überleben, sondern auch darum, eine neue Gesellschaft aufzubauen. Über sieben Staffeln erzählen wir ihre Geschichte voller Action, Drama und Hoffnung in einer zerstörten Welt.",
+  "project_2_description": "Die Horror-Thriller <b>We are not alone 1983</b> entführt dich in eine düstere Welt voller Verschwörungen und Geheimnisse. Im Jahr 1983 gelangt die Aktivistengruppe „Wiedergeburt“ an geheime Atomcodes und bringt damit die Welt an den Rand eines nuklearen Winters. In drei spannungsgeladenen Filmen verfolgen wir die dunklen Folgen ihres Handelns und den verzweifelten Kampf ums Überleben in einer eisigen, bedrohlichen Welt.",
+
+  "application_heading": "Du willst mitmachen?",
+  "application_content": "Ob Kamera oder Schnitt, Maske oder Schauspiel – wir suchen kreative Köpfe, die Lust haben, Teil eines engagierten Filmteams zu werden. Du möchtest mit uns außergewöhnliche Geschichten erzählen? Dann werde Teil unseres Projekts!",
+  "application_button": "Bewerbungsformular",
+  "application_link": "https://docs.google.com/forms/d/e/1FAIpQLSfArHLfJK0wmlzbdyd3WbJfkINGAImy3c-3L4GnUjbekhI2Iw/viewform?usp=pp_url"
 }
