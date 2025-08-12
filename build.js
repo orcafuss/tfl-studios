@@ -1,4 +1,3 @@
-// build.js
 const fs = require('fs');
 const path = require('path');
 const mustache = require('mustache');
@@ -24,11 +23,33 @@ function copyRecursive(src, dest) {
   }
 }
 
+// 🆕 Funktion für Fettschrift-Parsing
+function formatText(text) {
+  if (typeof text !== 'string') return text;
+  return text.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+}
+
+// 🆕 Alle Strings im Übersetzungsobjekt formatieren (auch verschachtelte)
+function formatTranslations(obj) {
+  const formatted = {};
+  for (const key in obj) {
+    if (typeof obj[key] === 'string') {
+      formatted[key] = formatText(obj[key]);
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+      formatted[key] = formatTranslations(obj[key]);
+    } else {
+      formatted[key] = obj[key];
+    }
+  }
+  return formatted;
+}
+
 // read translations
 const langFiles = fs.readdirSync(TRANSLATIONS).filter(f => f.endsWith('.json'));
 const langs = langFiles.map(f => {
   const code = path.basename(f, '.json');
-  const data = JSON.parse(fs.readFileSync(path.join(TRANSLATIONS, f), 'utf8'));
+  let data = JSON.parse(fs.readFileSync(path.join(TRANSLATIONS, f), 'utf8'));
+  data = formatTranslations(data); // 🆕 hier direkt formatiert
   return { code, data };
 });
 
