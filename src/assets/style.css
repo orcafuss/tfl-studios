@@ -7,6 +7,7 @@
 }
 
 :root {
+    --background-dark: #0A0A0A;
     --background: #1a1a1a;
     --background-muted: #2a2a2a;
     --text-light: #eaeaea;
@@ -82,6 +83,7 @@ footer {
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
+    background-color: var(--background-dark);
 }
 
 /* interactive elements */
@@ -143,18 +145,6 @@ footer a:hover {
         text-align: left;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
