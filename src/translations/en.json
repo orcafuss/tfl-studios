@@ -3,8 +3,20 @@
 
   "slogan": "Independent. Creative. Moving.",
   "home": "Home",
+
   "legal_notice": "Legal notice",
+  "legal_notice_introduction": "Information pursuant to § 5 TMG:",
+  "representative": "Legal representative:",
+  "responsible": "Person responsible for content pursuant to § 55 para. 2 RStV:",
+  "liability_for_content": "Liability for content",
+  "liability_for_content_notice": "As service providers, we are responsible for our own content on these pages in accordance with general laws (§ 7 para. 1 TMG). However, we are not obliged to monitor transmitted or stored third-party information (§§ 8–10 TMG).",
+  "liability_for_links": "Liability for links",
+  "liability_for_links_notice": "Our website may contain links to external third-party websites, over whose content we have no control. We therefore assume no liability for these external contents. The respective provider or operator of the pages is always responsible.",
+  "copyright": "Copyright",
+  "copyright_notice": "The content and works created by us on this website are subject to German copyright law. Any reproduction, editing, or distribution outside the limits of copyright law requires the written consent of the respective author.",
+
   "privacy_policy": "Privacy policy",
+  "privacy_policy_introduction": "We appreciate your interest in our film studio and our website.",
 
   "introduction_heading": "About us",
   "introduction_content": "We are **TFL Studios**, a newcomer to the indie film scene. Our goal is to create films without waiting for big budgets or studio backing. We want to prove that great stories are born from passion and love for the craft – and we hope to inspire others to pick up a camera and start creating too.",
